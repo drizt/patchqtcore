@@ -85,7 +85,8 @@ int main(int argc, char *argv[])
 
     fseek(f, prf - buf, SEEK_SET);
     fputc('.', f);
-    for (int i = 1; i < prf_end - prf; ++i) {
+    int i;
+    for (i = 1; i < prf_end - prf; ++i) {
         fputc('\0', f);
     }
 
